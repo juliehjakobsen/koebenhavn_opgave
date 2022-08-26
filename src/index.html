@@ -12,8 +12,51 @@
       rel="stylesheet"
     />
   </head>
+  <header>
+    <nav class="border-3 mt-5">
+      <div class="flex gap-10">
+        <button id="light" data-theme="light" class="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true"
+            role="img"
+            class="iconify iconify--ic pointer-events-none"
+            width="32"
+            height="32"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11.01 3.05C6.51 3.54 3 7.36 3 12a9 9 0 0 0 9 9c4.63 0 8.45-3.5 8.95-8c.09-.79-.78-1.42-1.54-.95A5.403 5.403 0 0 1 11.1 7.5c0-1.06.31-2.06.84-2.89c.45-.67-.04-1.63-.93-1.56z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </button>
+        <button id="dark" data-theme="dark" class="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true"
+            role="img"
+            class="iconify iconify--mdi pointer-events-none"
+            width="32"
+            height="32"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 6a6 6 0 0 1 6 6c0 2.22-1.21 4.16-3 5.2V19a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1.8c-1.79-1.04-3-2.98-3-5.2a6 6 0 0 1 6-6m2 15v1a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-1h4m6-10h3v2h-3v-2M1 11h3v2H1v-2M13 1v3h-2V1h2M4.92 3.5l2.13 2.14l-1.42 1.41L3.5 4.93L4.92 3.5m12.03 2.13l2.12-2.13l1.43 1.43l-2.13 2.12l-1.42-1.42z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
   <body
-    class="text-neutral-700 grid place-items-center prose-h3:mb-3 prose-h3:text-lg prose-h3:font-bold prose-p:text-xs prose-p:leading-6 md:prose-h3:text-xl md:prose-h4:text-sm md:prose-p:text-base md:prose-p:leading-8"
+    id="body"
+    class="grid place-items-center bg-grå prose-h3:mb-3 prose-h3:text-lg prose-h3:font-bold prose-p:text-xs prose-p:leading-6 dark:bg-morkebrun dark:text-lyseblaa md:prose-h3:text-xl md:prose-h4:text-sm md:prose-p:text-base md:prose-p:leading-8"
   >
     <section class="mx-8 my-8 grid grid-cols-2">
       <div>
@@ -24,7 +67,9 @@
         />
       </div>
       <div class="ml-5">
-        <h1 class="mb-5 text-xl font-bold text-morkebrun md:text-6xl">
+        <h1
+          class="mb-5 text-xl font-bold text-morkebrun dark:text-lyseblaa md:text-5xl"
+        >
           Københavnerbilleder - <i> en guide til hipster fotos </i>
         </h1>
 
@@ -32,54 +77,56 @@
       </div>
     </section>
 
-    <div class="flex">
-      <svg
-        class="mt-7 mr-5 animate-ping"
-        width="32"
-        height="32"
-        viewBox="0 0 21 21"
-      >
-        <g
-          fill="none"
-          fill-rule="evenodd"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          transform="translate(3 2)"
+    <section>
+      <div class="flex">
+        <svg
+          class="mt-7 mr-5 animate-ping dark:text-lyseblaa"
+          width="32"
+          height="32"
+          viewBox="0 0 21 21"
         >
-          <circle cx="8.5" cy="8.5" r="8" />
-          <path d="m9.5 11.5l3-3l-3-3m3 3h-8" />
-        </g>
-      </svg>
-      <div class="text-center">
-        <button
-          class="bg-white my-5 rounded border-2 border-morkebrun py-2 px-4 text-xl font-semibold text-morkebrun shadow hover:bg-morkebrun hover:text-2xl hover:text-hvid"
+          <g
+            fill="none"
+            fill-rule="evenodd"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            transform="translate(3 2)"
+          >
+            <circle cx="8.5" cy="8.5" r="8" />
+            <path d="m9.5 11.5l3-3l-3-3m3 3h-8" />
+          </g>
+        </svg>
+        <div class="text-center">
+          <button
+            class="bg-white text-rod my-5 rounded border-2 border-morkerod py-2 px-4 text-xl font-semibold shadow hover:bg-morkerod hover:text-2xl hover:text-hvid dark:border-lyseblaa"
+          >
+            Køb bogen her!
+          </button>
+        </div>
+        <svg
+          class="mt-7 ml-5 animate-ping text-morkerod dark:text-lyseblaa"
+          width="32"
+          height="32"
+          viewBox="0 0 21 21"
         >
-          Køb bogen her!
-        </button>
+          <g
+            fill="none"
+            fill-rule="evenodd"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            transform="translate(3 2)"
+          >
+            <circle cx="8.5" cy="8.5" r="8" />
+            <path d="m7.5 11.5l-3-3l3-3m5 3h-8" />
+          </g>
+        </svg>
       </div>
-      <svg
-        class="mt-7 ml-5 animate-ping"
-        width="32"
-        height="32"
-        viewBox="0 0 21 21"
-      >
-        <g
-          fill="none"
-          fill-rule="evenodd"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          transform="translate(3 2)"
-        >
-          <circle cx="8.5" cy="8.5" r="8" />
-          <path d="m7.5 11.5l-3-3l3-3m5 3h-8" />
-        </g>
-      </svg>
-    </div>
+    </section>
 
     <section class="mx-8 mb-12">
-      <h3 class="text-morkebrun">Info om bogen</h3>
+      <h3 class="text-morkerod dark:text-lyseblaa">Info om bogen</h3>
       <div class="grid grid-cols-2">
         <p class="md:text-xl">
           Titel: <em> Københavnerbilleder - en guide til hipster foto </em>
@@ -120,7 +167,7 @@
 
     <section class="mx-8 mb-12">
       <ul>
-        <h3 class="text-morkebrun">Kapitlerne</h3>
+        <h3 class="text-morkerod dark:text-lyseblaa">Kapitlerne</h3>
         <div class="grid grid-cols-2 text-xs">
           <li>
             <h4 class="font-bold">Kapitel 1 - Intro til street foto</h4>
@@ -208,7 +255,7 @@
           </li>
         </div>
         <div class="rounded underline hover:text-xl">
-          <a class="font-bold text-morkebrun" href="">
+          <a class="font-bold text-morkerod dark:text-lyseblaa" href="">
             Download et prøvekapitel af den prisvindende bog her!</a
           >
         </div>
@@ -216,12 +263,14 @@
     </section>
 
     <section class="mx-8 mb-12">
-      <h3 class="font-bold text-morkebrun">Det siger pressen</h3>
+      <h3 class="font-bold text-morkerod dark:text-lyseblaa">
+        Det siger pressen
+      </h3>
       <div class="grid grid-cols-3">
         <div class="m-1">
           <div class="flex">
             <svg
-              class="w-3 text-morkerod"
+              class="w-3 text-morkerod dark:text-lyseblaa"
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -232,7 +281,7 @@
               />
             </svg>
             <svg
-              class="w-3 text-morkerod"
+              class="w-3 text-morkerod dark:text-lyseblaa"
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -243,7 +292,7 @@
               />
             </svg>
             <svg
-              class="w-3 text-morkerod"
+              class="w-3 text-morkerod dark:text-lyseblaa"
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -254,7 +303,7 @@
               />
             </svg>
             <svg
-              class="w-3 text-morkerod"
+              class="w-3 text-morkerod dark:text-lyseblaa"
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -265,7 +314,7 @@
               />
             </svg>
             <svg
-              class="w-3 text-morkerod"
+              class="w-3 text-morkerod dark:text-lyseblaa"
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -276,7 +325,7 @@
               />
             </svg>
             <svg
-              class="w-3 text-morkerod"
+              class="w-3 text-morkerod dark:text-lyseblaa"
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -293,12 +342,14 @@
             135-filmen kom på markedet, du kun har skudt digitalt eller er helt
             nybegynder, er der masser af tips og tricks i bogen. <br />
           </p>
-          <p class="font-bold text-morkerod">- Hanne Hovgaard, Berlingeren</p>
+          <p class="font-bold text-morkerod dark:text-lyseblaa">
+            - Hanne Hovgaard, Berlingeren
+          </p>
         </div>
         <div class="m-1">
           <div class="flex">
             <svg
-              class="w-3 text-morkerod"
+              class="w-3 text-morkerod dark:text-lyseblaa"
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -309,7 +360,7 @@
               />
             </svg>
             <svg
-              class="w-3 text-morkerod"
+              class="w-3 text-morkerod dark:text-lyseblaa"
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -320,7 +371,7 @@
               />
             </svg>
             <svg
-              class="w-3 text-morkerod"
+              class="w-3 text-morkerod dark:text-lyseblaa"
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -331,7 +382,7 @@
               />
             </svg>
             <svg
-              class="w-3 text-morkerod"
+              class="w-3 text-morkerod dark:text-lyseblaa"
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -342,7 +393,7 @@
               />
             </svg>
             <svg
-              class="w-3 text-morkerod"
+              class="w-3 text-morkerod dark:text-lyseblaa"
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -357,14 +408,14 @@
             Teksten er underholdende, og billederne er sku’ flotte. Hvad mere
             skal man sige om en fotobog? <br />
           </p>
-          <p class="font-bold text-morkerod">
+          <p class="font-bold text-morkerod dark:text-lyseblaa">
             - Kim Kloggaard, Fotojournalen.dk
           </p>
         </div>
         <div>
           <div class="m-1 flex">
             <svg
-              class="w-3 text-morkerod"
+              class="w-3 text-morkerod dark:text-lyseblaa"
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -375,7 +426,7 @@
               />
             </svg>
             <svg
-              class="w-3 text-morkerod"
+              class="w-3 text-morkerod dark:text-lyseblaa"
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -386,7 +437,7 @@
               />
             </svg>
             <svg
-              class="w-3 text-morkerod"
+              class="w-3 text-morkerod dark:text-lyseblaa"
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -397,7 +448,7 @@
               />
             </svg>
             <svg
-              class="w-3 text-morkerod"
+              class="w-3 text-morkerod dark:text-lyseblaa"
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -408,7 +459,7 @@
               />
             </svg>
             <svg
-              class="w-3 text-morkerod"
+              class="w-3 text-morkerod dark:text-lyseblaa"
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -419,7 +470,7 @@
               />
             </svg>
             <svg
-              class="w-3 text-morkerod"
+              class="w-3 text-morkerod dark:text-lyseblaa"
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -436,13 +487,15 @@
             element, meget bedre end “studiefotografering som begyndere.”
             Tillykke - godt arbejde. <br />
           </p>
-          <p class="font-bold text-morkerod">- Volmer Hansen, Lukkertiden.dk</p>
+          <p class="font-bold text-morkerod dark:text-lyseblaa">
+            - Volmer Hansen, Lukkertiden.dk
+          </p>
         </div>
       </div>
     </section>
 
     <section class="mx-8 mb-12">
-      <h3 class="text-morkebrun">Billeder fra bogen</h3>
+      <h3 class="text-morkerod dark:text-lyseblaa">Billeder fra bogen</h3>
       <div class="grid grid-cols-3">
         <img
           class="mb-2 w-11/12"
@@ -485,7 +538,7 @@
     </section>
 
     <section class="mx-8 mb-12">
-      <h3 class="text-morkebrun">Forfatteren</h3>
+      <h3 class="text-morkerod dark:text-lyseblaa">Forfatteren</h3>
       <div class="flex">
         <img
           class="grid w-1/2 pr-5 md:w-3/12 md:grid-cols-3"
@@ -510,7 +563,7 @@
 
     <section class="mx-8 mb-8 grid justify-items-center">
       <svg
-        class="... mb-6 h-10 w-10 animate-bounce text-morkebrun"
+        class="... mb-6 h-10 w-10 animate-bounce text-morkerod dark:text-lyseblaa"
         width="52"
         height="52"
         viewBox="0 0 21 21"
@@ -529,7 +582,7 @@
       </svg>
 
       <button
-        class="bg-white rounded border-2 border-morkebrun py-2 px-4 text-xl font-semibold text-morkebrun shadow hover:bg-morkebrun hover:text-2xl hover:text-hvid"
+        class="bg-white rounded border-2 border-morkerod py-2 px-4 text-xl font-semibold text-morkerod shadow hover:bg-morkerod hover:text-2xl hover:text-hvid dark:border-lyseblaa dark:text-lyseblaa"
       >
         Køb bogen her!
       </button>

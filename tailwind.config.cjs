@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: ["./src/**/*.{html,vue,js,ts,jsx,tsx}"],
   theme: {
     colors: {
@@ -9,6 +10,7 @@ module.exports = {
       lysebrun: "#8C745E",
       grå: "#D9D9D9",
       hvid: "#FFFFFF",
+      sort: "#000000",
     },
     extend: {},
   },
